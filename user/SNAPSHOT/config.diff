@@ -1,6 +1,6 @@
-CONFIG_TARGET_airoha=y
-CONFIG_TARGET_airoha_an7581=y
-CONFIG_TARGET_airoha_an7581_DEVICE_gemtek_w1700k-ubi=y
+CONFIG_TARGET_mediatek=y
+CONFIG_TARGET_mediatek_filogic=y
+CONFIG_TARGET_mediatek_filogic_DEVICE_zbtlink_zbt-z8106ax-m2-t=y
 CONFIG_ALL_KMODS=y
 CONFIG_DEVEL=y
 CONFIG_CCACHE=y
@@ -16,7 +16,6 @@ CONFIG_LIBCURL_MBEDTLS=y
 CONFIG_LIBCURL_NO_SMB="!"
 CONFIG_LIBCURL_PROXY=y
 CONFIG_LIBCURL_UNIX_SOCKETS=y
-CONFIG_PACKAGE_airoha-en7581-npu-firmware=m
 CONFIG_PACKAGE_attendedsysupgrade-common=y
 CONFIG_PACKAGE_cgi-io=y
 CONFIG_PACKAGE_curl=y
