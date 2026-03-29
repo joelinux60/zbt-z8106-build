@@ -26,7 +26,7 @@ if [ ! -x "$(command -v curl)" ]; then
     sudo -E apt -qq install curl
 fi
 packages_file="${BUILDER_TMP_DIR}/packages.txt"
-packages_url="https://github.com/joelinux60/w1700k-ubi-build/raw/refs/heads/main/scripts/host/packages.txt"
+packages_url="https://github.com/joelinux60/zbt-z8106-build/raw/refs/heads/main/scripts/host/packages.txt"
 (
   set +eo pipefail
   
