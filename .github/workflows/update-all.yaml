@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-slim
     strategy:
       matrix:
-        environment: [main, snapshot, zbt8106-t-AUTO]
+        environment: [main, snapshot]
     permissions:
       contents: write
     environment: ${{ matrix.environment }}
