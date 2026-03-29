@@ -20,7 +20,7 @@ jobs:
     env:
       HOST_WORK_DIR: ${{github.workspace}}
       BUILD_MODE: normal
-      BUILD_TARGET: baseline
+      BUILD_TARGET: snapshot
       BUILDER_TAG: ${{ matrix.os }}
 
     steps:
