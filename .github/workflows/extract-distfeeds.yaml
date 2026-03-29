@@ -21,10 +21,11 @@ jobs:
         run: |
           curl https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-zbtlink_zbt-z8103ax-c-squashfs-sysupgrade.bin --output sysupgrade.bin
           binwalk -e sysupgrade.bin
+          binwalk -e _sysupgrade.bin.extracted/sysupgrade-zbtlink_zbt-z8103ax-c/root
       - name: Prepare artifact
         run: |
           mkdir artifact
-          cp _sysupgrade.bin.extracted/squashfs-root/etc/apk/repositories.d/distfeeds.list .
+          cp _sysupgrade.bin.extracted/sysupgrade-zbtlink_zbt-z8103ax-c/_root.extracted/squashfs-root/etc/apk/repositories.d/distfeeds.list .
       - name: Upload artifact
         uses: actions/upload-artifact@v7
         with:
