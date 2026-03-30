@@ -8,13 +8,13 @@ echo ""
 temp_json="/tmp/github_versions_$$.tmp"
 > "$temp_json"  # Clear the file
 
-curl -sS https://api.github.com/repos/joelinux60/w1700k-ubi-build/releases | \
+curl -sS https://api.github.com/repos/joelinux60/zbt-z8106-build/releases | \
 jq -r '.[] | "\(.tag_name) \(.assets[] | select(.browser_download_url | contains("sysupgrade")) | .browser_download_url)"' | \
 while read -r tag url; do
     if [ -z "$url" ] || [ -z "$tag" ]; then
         continue
     fi
-    version=$(echo "$url" | sed -n 's/.*openwrt-airoha-an7581-\([^/]*\)-squashfs-sysupgrade.*/\1/p')
+    version=$(echo "$url" | sed -n 's/.*openwrt-mediatek-filogic-\([^/]*\)-squashfs-sysupgrade.*/\1/p')
     if [ -n "$version" ]; then
         [ -s "$temp_json" ] && printf ','
         printf "{\"tag\": \"%s\", \"url\": \"%s\", \"version\": \"%s\"}" "$tag" "$url" "$version"
