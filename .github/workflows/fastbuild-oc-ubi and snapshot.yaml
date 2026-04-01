@@ -1,4 +1,4 @@
-name: fastbuild oc-ubi and snapshot
+name: fastbuild snapshot and snapshot-d
 
 on:
   workflow_dispatch:
