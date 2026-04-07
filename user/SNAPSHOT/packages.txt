@@ -16,5 +16,5 @@
 # luci-app-mentohust https://github.com/BoringCat/luci-app-mentohust.git ref=1db86057
 # syslog-ng https://github.com/openwrt/packages.git ref=master root=feeds/packages/admin subdir=admin/syslog-ng override
 
-# qmodem https://github.com/FUjr/QModem.git
-# luci-app-3ginfo-lite https://github.com/4IceG/luci-app-3ginfo-lite.git
+qmodem https://github.com/FUjr/QModem.git
+luci-app-3ginfo-lite https://github.com/4IceG/luci-app-3ginfo-lite.git
