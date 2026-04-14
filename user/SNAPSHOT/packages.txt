@@ -18,3 +18,4 @@
 
 luci-app-w1700k-fancontrol https://github.com/rchen14b/luci-app-w1700k-fancontrol.git override
 luci-app-airoha-npu https://github.com/rchen14b/luci-app-airoha-npu.git override
+luci-app-mlo https://github.com/YYH2913/luci-app-mlo.git override
