@@ -1,4 +1,4 @@
-name: fastbuild oc-ubi and snapshot
+name: fastbuild snapshot and snapshot-d
 
 on:
   workflow_dispatch:
@@ -28,7 +28,8 @@ jobs:
           - normal
         # ########### Add your target name below ###########
         # E.g. target: [x86_64, wdr4310v1]
-        target: [minimal-oc-ubi, SNAPSHOT]
+    #    target: [minimal-oc-ubi, SNAPSHOT]
+        target: [SNAPSHOT]
         include:
         - mode: normal
           title: Build
@@ -126,7 +127,7 @@ jobs:
           gh release delete "$VERSION" --cleanup-tag -y
         fi
         # Create the new release
-        FILES_TO_UPLOAD=$(find ./openwrt_firmware -maxdepth 1 -type f -name "*sysupgrade.itb")
+        FILES_TO_UPLOAD=$(find ./openwrt_firmware -maxdepth 1 -type f -name "*sysupgrade.bin")
         gh release create "$VERSION" $FILES_TO_UPLOAD \
           --title "$VERSION"
 

@@ -20,7 +20,7 @@ jobs:
     environment: ${{ matrix.environment }}
     steps:
       - name: Checkout remote repository
-        uses: actions/checkout@main
+        uses: actions/checkout@v6
         with:
           repository: ${{ env.REMOTE_REPOSITORY }}
           ref: ${{ matrix.environment }}
